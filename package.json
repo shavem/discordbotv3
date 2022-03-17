@@ -1,0 +1,19 @@
+{
+  "name": "discordbotv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@sapphire/time-utilities": "^1.6.0",
+    "colorette": "^2.0.16",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  }
+}
