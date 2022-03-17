@@ -8,7 +8,7 @@
 const fs = require("fs");
 
 function getVars() {
-    return JSON.parse(fs.readFileSync('vars.json', 'utf-8').toString())
+    return JSON.parse(fs.readFileSync('./vars.json', 'utf-8').toString())
 }
 
 module.exports = {getVars};
