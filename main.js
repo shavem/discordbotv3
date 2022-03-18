@@ -54,7 +54,7 @@ const init = async () => {
     client.on("threadCreate", (thread) => thread.join());
 
     // Here we login the client.
-    client.login(process.env.DISCORD_TOKEN);
+    await client.login(process.env.DISCORD_TOKEN);
 
 // End top-level async/await function.
 };
