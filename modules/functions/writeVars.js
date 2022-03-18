@@ -9,7 +9,7 @@ const fs = require("fs");
 const logger = require("../logger.js");
 
 function writeVars(client) {
-    fs.writeFile('./vars.json', JSON.stringify(client.container.vars, null, 4), (err) => {
+    fs.writeFile(`${process.cwd()}/vars.json`, JSON.stringify(client.container.vars, null, 4), (err) => {
         if (err) {
             throw err;
         }
