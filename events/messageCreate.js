@@ -31,19 +31,21 @@ module.exports = async (client, message) => {
                 .catch(e => console.error("An error occurred replying on an error", e));
         }
     } else if (client.container.vars.openfire) {
+        let reactioncount = 0;
+        let reacted = false;
         for (const target of client.container.vars.targets) {
             if (message.author.id === target.user.match(/\d+/g)[0]) {
-                let reactioncount = 0;
                 if (Math.random() < client.container.vars.rateoffire) {
                     if (target.message.includes(".")) {
                         await message.reply(target.message);
-                    } else if (Math.random() < 0.25) {
+                    } else if (Math.random() < 0.25 && reacted === false) {
                         for (const letter of target.emoteMessage) {
                             if (reactioncount < 20) {
                                 await message.react(letter);
                                 reactioncount++;
                             }
                         }
+                        reacted = true;
                     } else {
                         await message.reply(target.message);
                     }
