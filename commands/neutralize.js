@@ -19,6 +19,7 @@ exports.run = async (client, message, args, level) => {
             writeVars(client);
             message.channel.send(`Neutralized ${args[0]} - ${args[1]}`);
         } catch (e) {
+
             message.channel.send(`Could not find ${args[0]} - ${args[1]}`);
             return;
         }

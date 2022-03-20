@@ -1,6 +1,30 @@
 {
     "prefix": "!",
-    "targets": [],
+    "targets": [
+        {
+            "name": "Shavem",
+            "user": "<@!306538703684239360>",
+            "message": "hello",
+            "emoteMessage": [
+                "🇭",
+                "🇪",
+                "🇱",
+                "🇴"
+            ]
+        },
+        {
+            "name": "Shavem",
+            "user": "<@!306538703684239360>",
+            "message": "hihello",
+            "emoteMessage": [
+                "🇭",
+                "🇮",
+                "🇪",
+                "🇱",
+                "🇴"
+            ]
+        }
+    ],
     "openfire": true,
     "rateoffire": "1"
 }
