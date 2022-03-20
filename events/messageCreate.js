@@ -36,9 +36,7 @@ module.exports = async (client, message) => {
         for (const target of client.container.vars.targets) {
             if (message.author.id === target.user.match(/\d+/g)[0]) {
                 if (Math.random() < client.container.vars.rateoffire) {
-                    if (target.message.includes(".")) {
-                        await message.reply(target.message);
-                    } else if (Math.random() < 0.25 && reacted === false) {
+                    if (Math.random() < 0.5 && reacted === false && !target.message.includes(".")) {
                         for (const letter of target.emoteMessage) {
                             if (reactioncount < 20) {
                                 await message.react(letter);
