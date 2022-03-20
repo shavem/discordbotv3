@@ -33,10 +33,16 @@ module.exports = async (client, message) => {
     } else if (client.container.vars.openfire) {
         for (const target of client.container.vars.targets) {
             if (message.author.id === target.user.match(/\d+/g)[0]) {
+                let reactioncount = 0;
                 if (Math.random() < client.container.vars.rateoffire) {
-                    if (Math.random() < 0.25) {
+                    if (target.message.includes(".")) {
+                        await message.reply(target.message);
+                    } else if (Math.random() < 0.25) {
                         for (const letter of target.emoteMessage) {
-                            await message.react(letter);
+                            if (reactioncount < 20) {
+                                await message.react(letter);
+                                reactioncount++;
+                            }
                         }
                     } else {
                         await message.reply(target.message);
